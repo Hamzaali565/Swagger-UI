@@ -43,3 +43,23 @@ app.use(
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
 });
+
+app.get("/books", async (req, res) => {
+  let data = [
+    { name: "beauty and beast" },
+    { name: "Pakistan Studies" },
+    { name: "Peer-e-Kamil" },
+  ];
+
+  res.status(200).json(data);
+});
+
+app.post("/books", async (req, res) => {
+  let { name } = req.body;
+  console.log("req.body.name", req.body.name);
+  if (!name) return res.status(400).send({ message: "Name is required !!!" });
+  let bookData = [];
+  bookData.push({ name, author: req.body.author });
+  console.log(bookData);
+  res.status(200).send({ bookData });
+});
