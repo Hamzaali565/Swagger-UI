@@ -1,6 +1,6 @@
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
-
+// import  {} from ";
 const options = {
   definition: {
     openapi: "3.1.0",
@@ -21,11 +21,11 @@ const options = {
     },
     servers: [
       {
-        url: `http://localhost:3001`,
+        url: `http://localhost:3001/api/v1`,
       },
     ],
   },
-  apis: ["./routes/*.js"],
+  apis: ["./src/Routes/*.mjs"],
 };
 
 export { options };

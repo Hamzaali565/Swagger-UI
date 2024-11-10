@@ -5,9 +5,9 @@ dotenv.config();
 
 DbConnect()
   .then(() => {
-    app.listen(process.env.PORT || 3001, () =>
-      console.log(`Server Runnig at PORT ${process.env.PORT} \n Connected`)
-    );
+    app.listen(process.env.PORT || 3001, () => {
+      console.log(`Server Runnig at PORT ${process.env.PORT} \n Connected`);
+    });
   })
   .catch(() => {
     console.log(`Failed to connect with server`);
