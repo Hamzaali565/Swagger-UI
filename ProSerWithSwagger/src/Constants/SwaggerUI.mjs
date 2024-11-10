@@ -24,6 +24,15 @@ const options = {
         url: `http://localhost:3001/api/v1`,
       },
     ],
+    components: {
+      securitySchemes: {
+        CookieAuth: {
+          type: "apiKey",
+          in: "cookie",
+          name: "token", // Name of the cookie that holds the token
+        },
+      },
+    },
   },
   apis: ["./src/Routes/*.mjs"],
 };
