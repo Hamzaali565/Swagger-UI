@@ -27,11 +27,10 @@ const login = asyncHandler(async (req, res) => {
   if (!isMatch) throw new ApiError(400, "Incorrect Password !!!");
 
   let token = await userCheck.isAccessToken();
-  console.log("token", token);
 
   const option = {
-    sameSite: "none",
-    http: true,
+    httpOnly: true, // More secure
+    secure: false, // Set to `true` in production if using HTTPS
   };
 
   res

@@ -33,6 +33,9 @@ const options = {
         },
       },
     },
+    security: {
+      cookieAuth: [],
+    },
   },
   apis: ["./src/Routes/*.mjs"],
 };

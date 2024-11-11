@@ -27,7 +27,7 @@ user.methods.isAccessToken = async function () {
       userid: this.userid,
       username: this.username,
     },
-    "topSecret",
+    process.env.SECRET,
     { expiresIn: "2d" }
   );
 };

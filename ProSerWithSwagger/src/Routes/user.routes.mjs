@@ -3,6 +3,7 @@ import {
   login,
   signup,
 } from "../Controllers/user.controllers/user.controllers.mjs";
+import { productPosting } from "../Controllers/product.controller/product.controller.mjs";
 
 const router = Router();
 
